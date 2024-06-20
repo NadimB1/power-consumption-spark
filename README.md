@@ -1,35 +1,37 @@
 # Real-Time Power Consumption Analysis System
 ## Project Description
 
-This system is designed to capture and process real-time power consumption data using Apache Kafka and Apache Spark. The system consists of three main components:
-
-* KafkaProducerApp: Generates data by reading from a CSV file and publishes it to a Kafka topic.
-* KafkaConsumerApp: Consumes the data from Kafka, processes it, and stores it in an SQLite database.
-* StructuredStreamingApp: Analyzes the data using Spark's structured streaming capabilities to perform real-time analytics.
+This system provides real-time monitoring and analysis of power consumption data. It employs a full-stack solution using Python for backend processing and a dynamic HTML frontend for visualization. The system captures data, predicts power usage, and detects anomalies, leveraging advanced machine learning models.
 
 # Getting Started
 
 ## Prerequisites
-* Java 8 or later
-* Scala
-* Apache Kafka
-* Apache Spark
-* SQLite
+* Python 3.x
+* Flask (for serving the data and running the backend)
+* Libraries: Pandas, NumPy, Plotly, TensorFlow (for machine learning models)
+* HTML5, JavaScript (with Plotly.js for frontend visualizations)
 
-##Installation
-* Install the required software, then clone this repository to your local machine.
+## Installation
 
-# Running the System
-Start Kafka and create the necessary topics.
-Run KafkaProducerApp to begin data production.
-Start KafkaConsumerApp to consume and process the data.
-Execute StructuredStreamingApp to perform real-time analytics.
+Install Python and the necessary libraries using pip:
+```pip install flask pandas numpy plotly tensorflow```
+
+Clone this repository and navigate to the project directory.
+
+## Running the System
+
+Start the Flask server by running app_ai.py or app_v2.py:
+```python app_ai.py```
+
+Open your web browser and navigate to localhost:5000 to view the real-time dashboard.
 
 # Usage
-This system is ideal for monitoring and analyzing power consumption data in real-time. It can be extended or modified to fit various use cases involving large data streams.
+This system is designed for energy managers and environmental scientists to monitor and analyze power consumption in real-time. It provides insights into daily usage, predictive analytics, and anomaly detection.
+
+# Outputs
+Real-time power consumption charts
+Predictive analytics for future consumption
+Anomaly alerts if consumption deviates from expected patterns
 
 # License
 This project is proprietary and may require permissions to use or modify.
-
-# Acknowledgments
-The Spark and Kafka communities for their excellent resources and support.
